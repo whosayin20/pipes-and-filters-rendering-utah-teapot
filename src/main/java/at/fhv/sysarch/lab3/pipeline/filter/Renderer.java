@@ -36,11 +36,10 @@ public class Renderer<I extends Pair<Face, Color>> implements IFilter<I, Face> {
         Vec2 v3 = face.getV3().toScreen();
 
         double xpoints[] = {v1.getX() + halfWidth, v2.getX() + halfWidth, v3.getX() + halfWidth};
-        double ypoints[] = {v1.getY() * (-1) + halfHeight, v2.getY() * (-1) + halfHeight, (v3.getY() * (-1) + halfHeight)};
-
+        double ypoints[] = {v1.getY() + halfHeight, v2.getY() + halfHeight, (v3.getY() + halfHeight)};
 
         if (rm == RenderingMode.POINT) {
-            context.fillOval(v1.getX() + halfWidth, v1.getY() * (-1) + halfHeight, 3, 3);
+            context.fillOval(v1.getX() + halfWidth, v1.getY() + halfHeight, 3, 3);
             context.setFill(color);
         } else if (rm == RenderingMode.WIREFRAME) {
             context.strokePolygon(xpoints, ypoints, xpoints.length);
@@ -49,7 +48,6 @@ public class Renderer<I extends Pair<Face, Color>> implements IFilter<I, Face> {
             context.fillPolygon(xpoints, ypoints, xpoints.length);
             context.setFill(color);
         }
-
 
         //Alternative
 //        context.strokeLine(face.getV1().getX(), face.getV1().getY(), face.getV2().getX(), face.getV2().getY());

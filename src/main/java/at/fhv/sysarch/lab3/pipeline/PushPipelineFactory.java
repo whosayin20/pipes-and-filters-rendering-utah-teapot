@@ -20,8 +20,9 @@ public class PushPipelineFactory {
         ModelSource source = new ModelSource();
         ScaleFace scaleFace = new ScaleFace(pd.getViewWidth(), pd.getViewHeight());
         TransFormFace modelView = new TransFormFace();
-        ColorFace colorFace = new ColorFace(pd.getModelColor());
         BackFaceCulling backFaceCulling = new BackFaceCulling();
+        DepthSorting depthSorting = new DepthSorting();
+        ColorFace colorFace = new ColorFace(pd.getModelColor());
         LightenFace lightenFace = new LightenFace(pd.getLightPos());
         PerspectiveProj perspectiveProj = new PerspectiveProj(pd.getProjTransform());
         ScreenSpaceTransformation screenSpaceTransformation = new ScreenSpaceTransformation(pd.getViewportTransform());
@@ -39,10 +40,11 @@ public class PushPipelineFactory {
 
 
         // TODO 3. perform depth sorting in VIEW SPACE
+        ConnectFilters(backFaceCulling, depthSorting);
 
 
         // TODO 4. add coloring (space unimportant)
-        ConnectFilters(backFaceCulling, colorFace);
+        ConnectFilters(depthSorting, colorFace);
 
 
         // lighting can be switched on/off
@@ -58,11 +60,11 @@ public class PushPipelineFactory {
 
 
         // TODO 6. perform perspective division to screen coordinates
-        ConnectFilters(perspectiveProj, renderer);
+        ConnectFilters(perspectiveProj, screenSpaceTransformation);
 
 
         // TODO 7. feed into the sink (renderer)
-        //ConnectFilters(screenSpaceTransformation, renderer);
+        ConnectFilters(screenSpaceTransformation, renderer);
 
 
         // returning an animation renderer which handles clearing of the

@@ -10,7 +10,7 @@ public class ScaleFace<I extends Face> implements IFilter<Face, Face> {
 
     public ScaleFace(int viewWidth, int viewHeight) {
         this.screenResolution = viewWidth * viewHeight;
-        float SCALE_CONST = (float) (100.0 / screenResolution); // z = 100 / (x * y)
+        float SCALE_CONST = (float) (100.0 / screenResolution); // z = 100 / (x * y) - always scales teapot to 100, independent of screen resolution
         this.scalar = SCALE_CONST * screenResolution;
     }
 
