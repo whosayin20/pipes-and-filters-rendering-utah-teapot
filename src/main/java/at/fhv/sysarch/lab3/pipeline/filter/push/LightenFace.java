@@ -29,10 +29,11 @@ public class LightenFace<I extends Pair<Face, Color>> implements IFilter<I, Pair
 
 
         //If the dot product is below or equal zero it means that the face is not facing the light and is therefore black (assuming no other indirect light).
-        if (face.getN1().toVec3().dot(lightPos) <= 0 || face.getN2().toVec3().dot(lightPos) <= 0 || face.getN3().toVec3().dot(lightPos) <= 0) {
-            newPair = new Pair<>(face, color.darker().darker().darker());
+        float dotProduct = face.getN1().toVec3().dot(lightPos.getUnitVector());
+        if (dotProduct <= 0)  {
+            pipeSuccessor.write(new Pair<>(face, Color.BLACK));
         }
-        pipeSuccessor.write(newPair);
+        pipeSuccessor.write(new Pair<>(face, color.deriveColor(0, 1, dotProduct, 1)));
     }
 
     private float avgN(Face face) {

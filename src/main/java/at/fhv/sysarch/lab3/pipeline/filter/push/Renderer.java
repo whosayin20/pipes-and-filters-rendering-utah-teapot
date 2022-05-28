@@ -38,15 +38,15 @@ public class Renderer<I extends Pair<Face, Color>> implements IFilter<I, Face> {
         double xpoints[] = {v1.getX() + halfWidth, v2.getX() + halfWidth, v3.getX() + halfWidth};
         double ypoints[] = {v1.getY() + halfHeight, v2.getY() + halfHeight, (v3.getY() + halfHeight)};
 
+        context.setStroke(color);
+        context.setFill(color);
         if (rm == RenderingMode.POINT) {
-            context.fillOval(v1.getX() + halfWidth, v1.getY() + halfHeight, 3, 3);
-            context.setFill(color);
+            context.fillOval(xpoints[0], ypoints[0], 3, 3);
         } else if (rm == RenderingMode.WIREFRAME) {
             context.strokePolygon(xpoints, ypoints, xpoints.length);
-            context.setStroke(color);
         } else if (rm == RenderingMode.FILLED) {
             context.fillPolygon(xpoints, ypoints, xpoints.length);
-            context.setFill(color);
+            context.strokePolygon(xpoints, ypoints, xpoints.length);
         }
 
         //Alternative
