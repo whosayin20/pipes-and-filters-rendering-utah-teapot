@@ -1,0 +1,7 @@
+
+|
+java:S1488H"aImmediately return this expression instead of assigning it to the temporary variable "normalVec".(èÂèùÿÿÿÿ
+T
+java:S1659">Declare "y" and all following declarations on a separate line.(ˆÊ‘»
+]
+java:S1126µ"AReplace this if-then-else statement by a single return statement.(¿ØØùÿÿÿÿ

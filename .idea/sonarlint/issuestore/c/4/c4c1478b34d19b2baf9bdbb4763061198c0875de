@@ -1,0 +1,21 @@
+
+U
+java:S1118":Add a private constructor to hide the implicit public one.(ÍÕŠ¥ıÿÿÿÿ
+C
+java:S1197¸",Move the array designators [][] to the type.(ğÉ®ç
+C
+java:S1197Ç",Move the array designators [][] to the type.(±¾šú
+H
+java:S1197Ô",Move the array designators [][] to the type.(¡äàËüÿÿÿÿ
+H
+java:S1197Õ",Move the array designators [][] to the type.(Ö¤È¦øÿÿÿÿ
+F
+java:S1197Ö"*Move the array designators [] to the type.(ÚæÂıÿÿÿÿ
+n
+java:S3776ö"RRefactor this method to reduce its Cognitive Complexity from 18 to the 15 allowed.(ò¦¹£ùÿÿÿÿ
+H
+java:S1197ö",Move the array designators [][] to the type.(ò¦¹£ùÿÿÿÿ
+A
+java:S1197÷"*Move the array designators [] to the type.(‹¯é
+A
+java:S1197ù"*Move the array designators [] to the type.(Á’„ 

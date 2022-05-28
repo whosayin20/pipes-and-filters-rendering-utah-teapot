@@ -1,0 +1,24 @@
+
+u
+java:S2293›"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ûº¦©øÿÿÿÿ
+n
+java:S1192Í"XDefine a constant instead of duplicating this literal "%8.5f %8.5f %8.5f %8.5f" 4 times.(¡—‡
+\	java:S107x"BConstructor has 16 parameters, which is greater than 7 authorized.(™°†òÿÿÿÿÿ
+[
+java:S1659)"@Declare "m10" and all following declarations on a separate line.(¼õõ¹úÿÿÿÿ
+[
+java:S1659*"@Declare "m11" and all following declarations on a separate line.(·çúÿÿÿÿ
+[
+java:S1659+"@Declare "m12" and all following declarations on a separate line.(«¥„åüÿÿÿÿ
+U
+java:S1659,"@Declare "m13" and all following declarations on a separate line.(†Îü:
+?
+java:S4274"(Replace this assert with a proper check.(§ö–Â
+?
+java:S4274Á"(Replace this assert with a proper check.(°ğ¼ƒ
+?
+java:S4274ˆ"(Replace this assert with a proper check.(–ïû
+i
+java:S3776æ"RRefactor this method to reduce its Cognitive Complexity from 19 to the 15 allowed.(ÜÑã
+X
+java:S1126"AReplace this if-then-else statement by a single return statement.(§‡¹
