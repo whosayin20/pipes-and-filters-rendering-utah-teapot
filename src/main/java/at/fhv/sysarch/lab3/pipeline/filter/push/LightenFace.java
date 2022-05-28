@@ -1,10 +1,9 @@
-package at.fhv.sysarch.lab3.pipeline.filter;
+package at.fhv.sysarch.lab3.pipeline.filter.push;
 
 import at.fhv.sysarch.lab3.obj.Face;
 import at.fhv.sysarch.lab3.pipeline.Pipe;
 import at.fhv.sysarch.lab3.pipeline.data.Pair;
 import com.hackoeur.jglm.Vec3;
-import com.hackoeur.jglm.Vec4;
 import javafx.scene.paint.Color;
 
 public class LightenFace<I extends Pair<Face, Color>> implements IFilter<I, Pair<Face, Color>> {

@@ -2,7 +2,7 @@ package at.fhv.sysarch.lab3.pipeline;
 
 import at.fhv.sysarch.lab3.animation.AnimationRenderer;
 import at.fhv.sysarch.lab3.obj.Model;
-import at.fhv.sysarch.lab3.pipeline.filter.*;
+import at.fhv.sysarch.lab3.pipeline.filter.push.*;
 import com.hackoeur.jglm.Mat4;
 import com.hackoeur.jglm.Matrices;
 import javafx.animation.AnimationTimer;

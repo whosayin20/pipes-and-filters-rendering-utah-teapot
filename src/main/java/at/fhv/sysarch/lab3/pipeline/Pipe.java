@@ -1,6 +1,6 @@
 package at.fhv.sysarch.lab3.pipeline;
 
-import at.fhv.sysarch.lab3.pipeline.filter.IFilter;
+import at.fhv.sysarch.lab3.pipeline.filter.push.IFilter;
 
 // TODO: how can pipes be used for different data types?
 public class Pipe<I> {
